@@ -14,34 +14,47 @@ U-Net is a State of the Art CNN architecture for Bio-medical image segmentation.
 
 <img src="img/U-Net_arch.png">
 
-## Dataset Directory Structure
-
-Below is the structure of the dataset. *train, images, label, img* are all directories and *img* has all the images/labels. The structure below is crucial for correct working of **ImageDataGenerator.flow_from_directory()** 
-- train
-   - images
-      - img
-   - label
-      - img
-        
-## Sample image from the dataset
+## Dataset        
+### Sample image from the dataset
 
 Original Image            |  Ground Truth Segmentation Label
 :-------------------------:|:-------------------------:
 ![](img/sample_image.png)  |  ![](img/sample_label.png)
 
-## Sample image from the Canny edge "overlayed" dataset
+### Sample image from the Canny edge "overlayed" dataset
 
 Original Image            |  Canny Overlayed Image
 :-------------------------:|:-------------------------:
 ![](img/original_image.png)  |  ![](img/canny_image.png)
 
-## Comparision of model's prediction trained on Standard and Canny "overlayed" Dataset
+## Results
+### Comparision of model's prediction trained on Standard and Canny "overlayed" Dataset
 
 <img src="img/compare.png">
 
 **Note:** The text labels for 3rd and 4th(from the left) images above are swapped. Also Predicted Mask is for the model trained on the Original dataset, same for Binary mask.
 
 ***We can see that the prediction of model trained on the Canny dataset is better than the original dataset***
+The results are very good considering the fact that we had only 33 images our training dataset which is very limited!
+
+## Getting Started
+### Requirements
+1. [TensorFlow_1.x](https://www.tensorflow.org/versions)
+2. [Keras](https://keras.io/)
+3. [Matplotlib](https://matplotlib.org/3.1.3/users/installing.html)
+4. [Pillow](https://pypi.org/project/Pillow/)
+5. [Numpy](https://pypi.org/project/numpy/)
+### Installation
+Clone this repo to your local machine using https://github.com/Adarsh-K/Breast-Cancer-Image-Segmentation.git
+## Dataset Directory Structure
+Download the dataset from [here](https://zenodo.org/record/1175282#.Xl_4nZMzZQJ) and divide it into Train and Test/Validation dataset. I split into 33/17(arbitrary) you may use 70:30 split. Then arrange the splitted datasets as described below.
+*train, images, label, img* are all directories and *img* has all the images/labels. The structure below is crucial for correct working of **ImageDataGenerator.flow_from_directory()** 
+- train
+   - images
+      - img
+   - label
+      - img
+
 
 
 ## References

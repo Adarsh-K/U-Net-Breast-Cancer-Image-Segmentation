@@ -2,9 +2,9 @@
 ### Semantic Segmentation of Triple Negative Breast Cancer(TNBC) Dataset using U-Net CNN architecture
 
 ## Triple Negative Breast Cancer
-*Triple-negative breast cancer (TNBC) accounts for about 10-15%  of all breast cancers. These cancers tend to be more common in women younger than age 40, who are African-American.*
+*"Triple-negative breast cancer (TNBC) accounts for about 10-15%  of all breast cancers. These cancers tend to be more common in women younger than age 40, who are African-American.*
 
-*Triple-negative breast cancer differs from other types of invasive breast cancer in that they grow and spread faster, have limited treatment options, and a worse prognosis (outcome)*.  - **American Cancer Society**
+*Triple-negative breast cancer differs from other types of invasive breast cancer in that they grow and spread faster, have limited treatment options, and a worse prognosis (outcome)"*.  - **American Cancer Society**
 
 Thus early stage cancer detection is required to provide proper treatment to the patient and reduce the risk of death due to cancer as detection of these cancer cells at later stages lead to more suffering and increases chances of death. **Semantic segmentation of cancer cell images can be used to improvise the analysis and diagonsis of Breast Cancer! This is such an attempt.**
 
@@ -38,6 +38,7 @@ Original Image            |  Canny Overlayed Image
 The results are very good considering the fact that we had only 33 images our training dataset which is very limited!
 
 ## Getting Started
+I've documented and commented aggresively in all the modules and `Main.ipynb` thus following the code should be very easy. I've also included links to several discussions on stackoverflow, etc. so that you can get an in depth understanding of the working of the code. I've also included several plots which will help you in understanding the *training curve* and diagose possible errors which may creep in while training.
 ### Requirements
 1. [TensorFlow_1.x](https://www.tensorflow.org/versions)
 2. [Keras](https://keras.io/)
@@ -45,7 +46,7 @@ The results are very good considering the fact that we had only 33 images our tr
 4. [Pillow](https://pypi.org/project/Pillow/)
 5. [Numpy](https://pypi.org/project/numpy/)
 
-**Note:** I'd suggest using [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) or [Kaggle Notebook](https://www.kaggle.com/notebooks) then you **don't need to worry about the set-up!**
+**Note:** I'd suggest using [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) or [Kaggle Notebook](https://www.kaggle.com/notebooks) then you **don't need to worry about the set-up!** Plus you get ***free GPUs!***
 
 ### Installation
 Clone this repo to your local machine using https://github.com/Adarsh-K/Breast-Cancer-Image-Segmentation.git

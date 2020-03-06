@@ -28,4 +28,4 @@ U-Net is a State of the Art CNN architecture for Bio-medical image segmentation.
 
 
 ### Sample image from the Canny edge "overlayed" dataset
-![alt-text-1](img/sample_image.png "Original Image") ![alt-text-2](img/canny_image.png "Canny Overlayed Image")
+![alt-text-1](img/original_image.png "Original Image") ![alt-text-2](img/canny_image.png "Canny Overlayed Image")

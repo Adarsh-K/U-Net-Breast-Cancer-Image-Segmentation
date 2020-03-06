@@ -50,6 +50,7 @@ The results are very good considering the fact that we had only 33 images our tr
 ### Installation
 Clone this repo to your local machine using https://github.com/Adarsh-K/Breast-Cancer-Image-Segmentation.git
 ## Dataset Directory Structure
+### Train/Test Dataset
 Download the dataset from [here](https://zenodo.org/record/1175282#.Xl_4nZMzZQJ) and divide it into Train and Test/Validation dataset. I split into 33/17(arbitrary) you may use 70:30 split. Then arrange the splitted datasets as described below.
 
 *train, images, label, img* are all directories and *img* has all the images/labels. The structure below is crucial for correct working of **ImageDataGenerator.flow_from_directory()** 
@@ -60,7 +61,8 @@ Download the dataset from [here](https://zenodo.org/record/1175282#.Xl_4nZMzZQJ)
       - img
 
 Do the same for test dataset as well.
-
+### Performance Evaluation Dataset
+This dataset is essentially same as the Test dataset, but the dataset directory structure is quite different. Reason explained in `utils.py`. The structure should be as below:
 - test2
    - 0
       - 0
@@ -68,7 +70,8 @@ Do the same for test dataset as well.
    - 1
       - 1
          - 1.png
-
+ 
+ and so on for other images as well.
 ## References
 
 1. [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)

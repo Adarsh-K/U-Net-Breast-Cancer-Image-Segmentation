@@ -12,7 +12,9 @@ Thus early stage cancer detection is required to provide proper treatment to the
 U-Net is a State of the Art CNN architecture for Bio-medical image segmentation. *The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization.* It's a Fully Convolutional Network(FCN) therefore it can **work with arbitrary size images!**
 
 <img src="img/U-Net_arch.png">
+
 ## Dataset Directory Structure
+
 - train
    - images
       - img
@@ -20,8 +22,13 @@ U-Net is a State of the Art CNN architecture for Bio-medical image segmentation.
       - img
         
 ### Sample image from the dataset
-![alt-text-1](img/sample_image.png "Original Image") ![alt-text-2](img/sample_label.png "Ground Truth Segmentation Label")
 
+Original Image            |  Ground Truth Segmentation Label
+:-------------------------:|:-------------------------:
+![](img/sample_image.png)  |  ![](img/sample_label.png)
 
 ### Sample image from the Canny edge "overlayed" dataset
-![alt-text-1](img/original_image.png "Original Image") ![alt-text-2](img/canny_image.png "Canny Overlayed Image")
+
+Original Image            |  Canny Overlayed Image
+:-------------------------:|:-------------------------:
+![](img/original_image.png)  |  ![](img/canny_image.png)

@@ -14,7 +14,7 @@ U-Net is a State of the Art CNN architecture for Bio-medical image segmentation.
 
 <img src="img/U-Net_arch.png">
 
-## Dataset        
+# Dataset        
 ### Sample image from the dataset
 
 Original Image            |  Ground Truth Segmentation Label
@@ -27,7 +27,7 @@ Original Image            |  Canny Overlayed Image
 :-------------------------:|:-------------------------:
 ![](img/original_image.png)  |  ![](img/canny_image.png)
 
-## Results
+# Results
 ### Comparision of model's prediction trained on Standard and Canny "overlayed" Dataset
 
 <img src="img/compare.png">
@@ -61,6 +61,16 @@ Download the dataset from [here](https://zenodo.org/record/1175282#.Xl_4nZMzZQJ)
       - img
 
 Do the same for test dataset as well.
+### Canny Edge Overlayed dataset
+Here we are gonna produce a new dataset from the original dataset we downloaded above. Run `canny_edge_overlay.m` script. 
+
+Example for training set at location say `/home/Desktop/train`:
+
+```At line 7 change the file path from /Users/adarshkumar/Desktop/data1/test/images/img/%d.png -> /home/Desktop/train/images/img/%d.png
+Also change end index of for loop to number of examples in train dataset
+Note: Change file path at line 10 to where you want the Canny Edge "overlayed" images to be saved. 
+```
+Repeat the same steps for test dataset as well. As you might have already realised you require `MATLAB` for this but the same can also be achieved using [OpenCV: Canny Edge](https://docs.opencv.org/trunk/da/d22/tutorial_py_canny.html)
 ### Performance Evaluation Dataset
 This dataset is essentially same as the Test dataset, but the dataset directory structure is quite different. Reason explained in `utils.py`. The structure should be as below:
 - test2
@@ -72,6 +82,8 @@ This dataset is essentially same as the Test dataset, but the dataset directory 
          - 1.png
  
  and so on for other images as well.
+### Running Main.ipynb
+Before you run the Main.py notebook you should change the path of directories(**test, train, test2**) accordingly in modules: **augmentation.py, utils.py, plots.py**. Now we're all set! Simply run the notebook Main.ipynb and fine-tune the Hyper-parameters(learning rate, epoaches, steps per epoches, etc.)
 ## References
 
 1. [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)

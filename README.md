@@ -34,7 +34,7 @@ Original Image            |  Canny Overlayed Image
 
 **Note:** The text labels for 3rd and 4th(from the left) images above are swapped. Also Predicted Mask is for the model trained on the Original dataset, same for Binary mask.
 
-***We can see that the prediction of model trained on the Canny dataset is better than the original dataset***
+***We can see that the prediction of model trained on the Canny dataset is better than the original dataset***.
 The results are very good considering the fact that we had only 33 images our training dataset which is very limited!
 
 ## Getting Started
@@ -44,10 +44,14 @@ The results are very good considering the fact that we had only 33 images our tr
 3. [Matplotlib](https://matplotlib.org/3.1.3/users/installing.html)
 4. [Pillow](https://pypi.org/project/Pillow/)
 5. [Numpy](https://pypi.org/project/numpy/)
+
+**Note:** I'd suggest using [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) or [Kaggle Notebook](https://www.kaggle.com/notebooks) then you **don't need to worry about the set-up!**
+
 ### Installation
 Clone this repo to your local machine using https://github.com/Adarsh-K/Breast-Cancer-Image-Segmentation.git
 ## Dataset Directory Structure
 Download the dataset from [here](https://zenodo.org/record/1175282#.Xl_4nZMzZQJ) and divide it into Train and Test/Validation dataset. I split into 33/17(arbitrary) you may use 70:30 split. Then arrange the splitted datasets as described below.
+
 *train, images, label, img* are all directories and *img* has all the images/labels. The structure below is crucial for correct working of **ImageDataGenerator.flow_from_directory()** 
 - train
    - images
@@ -55,7 +59,15 @@ Download the dataset from [here](https://zenodo.org/record/1175282#.Xl_4nZMzZQJ)
    - label
       - img
 
+Do the same for test dataset as well.
 
+- test2
+   - 0
+      - 0
+         - 0.png
+   - 1
+      - 1
+         - 1.png
 
 ## References
 

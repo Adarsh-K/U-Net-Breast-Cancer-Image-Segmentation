@@ -85,10 +85,10 @@ This dataset is essentially same as the Test dataset, but the dataset directory 
 ### Running Main.ipynb
 Before you run the Main.py notebook you should change the path of directories(**test, train, test2**) accordingly in modules: **augmentation.py, utils.py, plots.py**. Now we're all set! Simply run the notebook `Main.ipynb` and fine-tune the Hyper-parameters(learning rate, epoaches, steps per epoches, etc.)
 
-## Deployment
+# Deployment
 Training a model for any other task is pretty straight forward, simply change the train/test datasets according to your need and arrange it in the structure described above, then run `Main.ipynb`. ***The plots will help you diagonse possible errors***
 
-You could improve the performance on some other Bio-medical task by using the weights saved for the original dataset in 2 .hdf5 files and use it as *pre-trained* weights for the other Bio-medical task. 
+You could **improve the performance on some other Bio-medical** task by using the weights saved for the original dataset in the 2 .hdf5 files we get after running `Main.ipynb` and use it as *pre-trained* weights for the other Bio-medical task. 
 ## References
 
 1. [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)

@@ -9,12 +9,14 @@
 Thus early stage cancer detection is required to provide proper treatment to the patient and reduce the risk of death due to cancer as detection of these cancer cells at later stages lead to more suffering and increases chances of death. Semantic segmentation of cancer cell images can be used to improvise the analysis and diagonsis of Breast Cancer! Below is such an attempt.
 
 ## U-Net
-U-Net is a State of the Art CNN architecture for Bio-medical image segmentation. *The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization.* It's a Fully Convolutional Network(FCN) therefore it can **work with arbitrary size images!**
+
+U-Net is a State of the Art CNN architecture for Bio-medical image segmentation. *The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization.* It's a Fully Convolutional Network(FCN) therefore it can **work with arbitrary size images!** I've implemented an architecture similar to the original U-Net architecture, except I've used **"same"** padding instead **"valid"** which the authors have used. Using "same" padding throughout makes the output segmentation mask of same (height, width) as that of the input.
 
 <img src="img/U-Net_arch.png">
 
 ## Dataset Directory Structure
 
+Below is the structure of the dataset. *train, images, label, img* are all directories and *img* has all the images/labels. The structure below is crucial for correct working of **ImageDataGenerator.flow_from_directory()** 
 - train
    - images
       - img
@@ -36,6 +38,11 @@ Original Image            |  Canny Overlayed Image
 ## Comparision of model's prediction trained on Standard and Canny "overlayed" Dataset
 
 <img src="img/compare.png">
+
+**Note:** The text labels for 3rd and 4th(from the left) images above are swapped. Also Predicted Mask is for the model trained on the Original dataset, same for Binary mask.
+
+***We can see that the prediction of model trained on the Canny dataset is better than the original dataset***
+
 
 ## References
 

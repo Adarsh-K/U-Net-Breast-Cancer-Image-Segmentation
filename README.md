@@ -21,14 +21,28 @@ U-Net is a State of the Art CNN architecture for Bio-medical image segmentation.
    - label
       - img
         
-### Sample image from the dataset
+## Sample image from the dataset
 
 Original Image            |  Ground Truth Segmentation Label
 :-------------------------:|:-------------------------:
 ![](img/sample_image.png)  |  ![](img/sample_label.png)
 
-### Sample image from the Canny edge "overlayed" dataset
+## Sample image from the Canny edge "overlayed" dataset
 
 Original Image            |  Canny Overlayed Image
 :-------------------------:|:-------------------------:
 ![](img/original_image.png)  |  ![](img/canny_image.png)
+
+## Comparision of model's prediction trained on Standard and Canny "overlayed" Dataset
+
+<img src="img/compare.png">
+
+## References
+
+1. [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
+2. [Triple Negative Breast Cancer- American Cancer Society](https://www.cancer.org/cancer/breast-cancer/understanding-a-breast-cancer-diagnosis/types-of-breast-cancer/triple-negative.html)
+3. [Deep Learning for Cancer Cell Detection and Segmentation: A Survey](https://www.researchgate.net/publication/334080872_Deep_Learning_for_Cancer_Cell_Detection_and_Segmentation_A_Survey)
+4. [Transfusion: Understanding Transfer Learning for Medical Imaging](https://arxiv.org/abs/1902.07208)
+5. [Dataset](https://zenodo.org/record/1175282#.Xl_4nZMzZQJ)
+
+**Note:** Not an exhaustive list

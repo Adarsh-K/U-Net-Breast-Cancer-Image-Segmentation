@@ -70,9 +70,9 @@ Example for training set at location say `/home/Desktop/train`:
 Also change end index of for loop to number of examples in train dataset
 Note: Change file path at line 10 to where you want the Canny Edge "overlayed" images to be saved. 
 ```
-Repeat the same steps for test dataset as well. As you might have already realised you require `MATLAB` for this but the same can also be achieved using [OpenCV: Canny Edge](https://docs.opencv.org/trunk/da/d22/tutorial_py_canny.html)
+Repeat the same steps for test dataset as well. As you might have already realised you require `MATLAB` for this but the **same can also be achieved** using [OpenCV: Canny Edge](https://docs.opencv.org/trunk/da/d22/tutorial_py_canny.html)
 ### Performance Evaluation Dataset
-This dataset is essentially same as the Test dataset, but the dataset directory structure is quite different. Reason explained in `utils.py`. The structure should be as below:
+This dataset is essentially same as the Test dataset, but the dataset directory structure is quite different. *Reason explained* in `utils.py`. The structure should be as below:
 - test2
    - 0
       - 0

@@ -14,15 +14,11 @@ U-Net is a State of the Art CNN architecture for Bio-medical image segmentation.
 <img src="img/U-Net_arch.png">
 ## Dataset Directory Structure
 - train
-    * images
-        * img
-    * label
-        * img
-- test
-    * images
-        * img
-    * label
-        * img
+   - images
+      - img
+   - label
+      - img
+        
 ### Sample image from the dataset
 ![alt-text-1](img/sample_image.png "Original Image") ![alt-text-2](img/sample_label.png "Ground Truth Segmentation Label")
 

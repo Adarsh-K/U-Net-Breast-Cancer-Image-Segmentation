@@ -1,6 +1,6 @@
 # Breast Cancer Image Segmentation
-For main implementation see `Main.ipynb` 
 ### Semantic Segmentation of Triple Negative Breast Cancer(TNBC) Dataset using U-Net CNN architecture
+For main implementation see `Main.ipynb` 
 
 ## Triple Negative Breast Cancer
 *"Triple-negative breast cancer (TNBC) accounts for about 10-15%  of all breast cancers. These cancers tend to be more common in women younger than age 40, who are African-American.*

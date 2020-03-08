@@ -55,11 +55,14 @@ Clone this repo to your local machine using https://github.com/Adarsh-K/Breast-C
 Download the dataset from [here](https://zenodo.org/record/1175282#.Xl_4nZMzZQJ) and divide it into Train and Test/Validation dataset. I split into 33/17(arbitrary) you may use 70:30 split. Then arrange the splitted datasets as described below.
 
 *train, images, label, img* are all directories and *img* has all the images/labels. The structure below is crucial for correct working of **ImageDataGenerator.flow_from_directory()** 
-- train
-   - images
-      - img
-   - label
-      - img
+
+```bash
+├── train
+│   ├── images
+│       ├── img
+└── ├── label
+        ├── img
+```
 
 Do the same for test dataset as well.
 ### Canny Edge Overlayed dataset
@@ -74,15 +77,22 @@ Note: Change file path at line 10 to where you want the Canny Edge "overlayed" i
 Repeat the same steps for test dataset as well. As you might have already realised you require `MATLAB` for this but the **same can also be achieved** using [OpenCV: Canny Edge](https://docs.opencv.org/trunk/da/d22/tutorial_py_canny.html)
 ### Performance Evaluation Dataset
 This dataset is essentially same as the Test dataset, but the dataset directory structure is quite different. *Reason explained* in `utils.py`. The structure should be as below:
-- test2
-   - 0
-      - 0
-         - 0.png
-   - 1
-      - 1
-         - 1.png
  
- and so on for other images as well.
+ ```bash
+├── test2
+│   ├── 0
+│       ├── 0
+│           ├── 0.png
+├── ├── 1
+│       ├── 1
+│           ├── 1.png
+│ 
+│ 
+.
+.
+.
+```
+
 ### Running Main.ipynb
 Before you run the Main.py notebook you should change the path of directories(**test, train, test2**) accordingly in modules: **augmentation.py, utils.py, plots.py**. Now we're all set! Simply run the notebook `Main.ipynb` and fine-tune the Hyper-parameters(learning rate, epoaches, steps per epoches, etc.)
 

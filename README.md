@@ -1,6 +1,21 @@
 # Breast Cancer Image Segmentation
 ### Semantic Segmentation of Triple Negative Breast Cancer(TNBC) Dataset using U-Net CNN architecture
-For main implementation see `Main.ipynb` 
+For main implementation see `Main.ipynb`
+
+## Outline
+
+1. [Introduction](#introduction)
+   * [Triple Negative Breast Cancer](#triple-negative-breast-cancer)
+   * [U-Net](#u-net)
+2. [Dataset](#dataset)
+3. [Results](#results)
+4. [Getting Started](#getting-started)
+   * [Requirements](#requirements)
+   * [Installation](#installation)
+   * [Dataset Directory Structure](#dataset-directory-structure)
+5. [Deployments](#deployment)
+6. [References](#references)
+
 # Introduction
 ## Triple Negative Breast Cancer
 *"Triple-negative breast cancer (TNBC) accounts for about 10-15%  of all breast cancers. These cancers tend to be more common in women younger than age 40, who are African-American.*
@@ -38,7 +53,7 @@ Original Image            |  Canny Overlayed Image
 ***We can see that the prediction of model trained on the Canny dataset is better than the original dataset***.
 The results are very good considering the fact that we had only 33 images our training dataset which is very limited!
 
-## Getting Started
+# Getting Started
 I've documented and commented aggresively in all the modules and `Main.ipynb` thus following the code should be very easy. I've also included links to several discussions on stackoverflow, etc. so that you can get an in depth understanding of the working of the code. I've also included several plots which will help you in understanding the *training curve* and diagose possible errors which may creep in while training.
 ### Requirements
 1. [TensorFlow_1.x](https://www.tensorflow.org/versions)

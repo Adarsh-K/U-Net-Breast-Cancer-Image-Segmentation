@@ -1,4 +1,5 @@
 # Breast Cancer Image Segmentation
+For main implementation see `Main.ipynb` 
 ### Semantic Segmentation of Triple Negative Breast Cancer(TNBC) Dataset using U-Net CNN architecture
 
 ## Triple Negative Breast Cancer

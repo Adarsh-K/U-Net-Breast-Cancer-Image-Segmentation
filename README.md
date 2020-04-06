@@ -56,8 +56,7 @@ Original Image            |  Canny Overlayed Image
 The results are very good considering the fact that we had only 33 images our training dataset which is very limited!
 
 ### Activation Map 
-For more information and implementation see plots.py
-
+For more information and implementation see [plots.py](https://github.com/Adarsh-K/Breast-Cancer-Image-Segmentation/blob/master/plots.py)
 
 These visuals are the Activation Maps aka activations or output of a given layer and channel of U-Net. These tell us **What the CNN is actually learning** and also gives users a sense of *other* Biological/Medical features in the image. 
 

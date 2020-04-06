@@ -1,6 +1,7 @@
 #### 'plots.py' module is used to: 
 ####	1. Plot "training curve" of the network/model(for various metrics as given in 'titles' below)  
 ####	2. Show for images- model's segmentation prediction, obtained "Binary mask" and "Ground Truth" segmentation
+####	3. Visualising Activation Maps for the model for an input image
 
 import matplotlib.pyplot as plt, random, numpy as np, cv2
 from PIL import Image

@@ -9,6 +9,8 @@ For main implementation see `Main.ipynb`
    * [U-Net](#u-net)
 2. [Dataset](#dataset)
 3. [Results](#results)
+   * [Model's prediction comparision on different datasets](comparision-of-model's-prediction-trained-on-standard-and-canny-"overlayed"-dataset)
+   * [Activation Maps](activation-map)
 4. [Getting Started](#getting-started)
    * [Requirements](#requirements)
    * [Installation](#installation)
@@ -52,6 +54,19 @@ Original Image            |  Canny Overlayed Image
 
 ***We can see that the prediction of model trained on the Canny dataset is better than the original dataset***.
 The results are very good considering the fact that we had only 33 images our training dataset which is very limited!
+
+### Activation Map 
+These visuals are the Activation Maps aka activations or output of a given layer and channel of U-Net. These tell us **What the CNN is actually learning** and also gives users a sense of *other* Biological/Medical features in the image. 
+
+Since I'm using 'jet' cmap therefore, red regions corresponds to high activation, blue for low and green/yellow for the middle ones.
+
+<img src="img/Activation_Map_1.png">
+
+As clearly seen above this filter has learnt to segment Cancer cells. The "overlayyed" image clearly distinguishes Cancer and non-Cancer cells.
+
+<img src="img/Activation_Map_2.png">
+
+This filter seems to have learnt to identify empty regions. The Cancer cells are maked in blue in the Activation Map, it's like this filter is **learning to ignore Cancer cells!** Things like this can really happen *despite the entire model is being trained to learn to segment Cancer cells.*
 
 # Getting Started
 I've documented and commented aggresively in all the modules and `Main.ipynb` thus following the code should be very easy. I've also included links to several discussions on stackoverflow, etc. so that you can get an in depth understanding of the working of the code. I've also included several plots which will help you in understanding the *training curve* and diagose possible errors which may creep in while training.

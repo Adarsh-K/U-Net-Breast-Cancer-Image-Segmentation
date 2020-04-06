@@ -2,8 +2,9 @@
 ####	1. Plot "training curve" of the network/model(for various metrics as given in 'titles' below)  
 ####	2. Show for images- model's segmentation prediction, obtained "Binary mask" and "Ground Truth" segmentation
 
-import matplotlib.pyplot as plt, random, numpy as np
+import matplotlib.pyplot as plt, random, numpy as np, cv2
 from PIL import Image
+from keras import backend as K
 
 def training_history_plot(results):
 	"""Plots "training curve" for the network/model for metrics listed below:
@@ -149,3 +150,56 @@ def canny_compare_plot(results, results_canny):
 		image = Image.open(fname).convert("L")
 		arr = np.asarray(image)
 		axs[(i*6)+5].imshow(arr/255, cmap='gray')
+
+def activation_map(image, layer, channel, m_c):
+	"""Displays:
+    		1. Original test image  
+    		2. Activation Map for provided layer and channel
+    		3. Transparent overlay of Activation Map over test image
+
+    Args:
+        image (file name): Location of test image
+        layer (int): Layer number, can be found from model summary
+        channel (int): Channel number in the 'layer', number of channels in provided layer can be found from 
+        		model summary
+        m_c (Model): Keras Model object used as network
+
+    Returns:
+        None
+	"""
+
+	# Define specification of our plot 
+	fig, axs = plt.subplots(1, 3, figsize=(20, 20), facecolor='w', edgecolor='k')
+	fig.subplots_adjust(wspace=0.2)
+	axs = axs.ravel()
+
+	# Displays Original test image 
+	ori=cv2.imread(image)
+	axs[0].set_title('Original Image')
+	axs[0].imshow(ori)
+	
+	# Displays Activation Map of test image for 'layer' and 'channel' 
+	img=cv2.imread(image, 0) # Reading image as "Grayscale" to ensure it's dimensions 1D ie. same as the Activation
+							# Map, also images feed into the network are "Grayscale"
+	x=cv2.resize(img, (256,256), interpolation = cv2.INTER_AREA)
+	x=np.expand_dims(x, axis=2) # Making images 4D as input should be 4D
+	x=np.expand_dims(x, axis=0)
+
+	# Keras function that will return the output of 'layer' given a input test image
+	get_layer_output = K.function([m_c.layers[0].input, K.learning_phase()],
+                                  [m_c.layers[layer].output])
+	layer_output = get_layer_output([x, 0])[0] 
+	act=layer_output[0, :, :,channel] # Visualising 'channel' of 'layer'
+	act=cv2.resize(act, (512,512))
+	act=act/255
+
+	axs[1].set_title('Activation Map')
+	axs[1].imshow(act,cmap='jet')
+
+	# Displays Activation Map "overlayyed" on test image
+	img=img.astype('float32')
+	img=cv2.resize(img, (512,512))
+	img=img/255
+	dst=cv2.addWeighted(img,0.5,act,0.5,0) # Giving equal weightage to both images
+	axs[2].set_title('Overlayed')
+	axs[2].imshow(dst, cmap='jet')
